@@ -1,0 +1,38 @@
+LOCAL_PATH := $(call my-dir)
+
+#include $(CLEAR_VARS)
+#LOCAL_MODULE := perl
+#LOCAL_SRC_FILES := ./lib/libperl.so
+#include $(PREBUILT_SHARED_LIBRARY)
+
+
+common_cflags := \
+	-DANDROID \
+	-DHAVE_CONFIG_H 
+	
+
+include $(CLEAR_VARS)
+LOCAL_C_INCLUDES := \
+	$(LOCAL_PATH) \
+	$(LOCAL_PATH)/CORE \
+	$(LOCAL_PATH)/../pcsc/src/PCSC \
+	$(LOCAL_PATH)/../pcsc/src/ \
+
+LOCAL_SRC_FILES:= \
+       PCSC.c 
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/
+#LOCAL_C_INCLUDES += $(LOCAL_PATH)/../libusb
+
+#LOCAL_CFLAGS += -O0 -g -D RAISE=1
+LOCAL_CFLAGS += -O0 -g
+
+LOCAL_MODULE_TAGS = eng
+LOCAL_MODULE:= PCSC
+LOCAL_MODULE_FILENAME := PCSC
+LOCAL_LDLIBS := -lperl
+#LOCAL_SHARED_LIBRARIES := perl
+LOCAL_SHARED_LIBRARIES := libpcsclite 
+LOCAL_PRELINK_MODULE := false
+include $(BUILD_SHARED_LIBRARY)
+

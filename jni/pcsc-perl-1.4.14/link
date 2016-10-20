@@ -1,0 +1,1 @@
+-shared -L/usr/local/lib -fstack-protector-strong

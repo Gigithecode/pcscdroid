@@ -1,0 +1,2917 @@
+2016-06-22  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.1.3.
+
+2016-06-22  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Update the version to 1.1.3 in configure.ac.
+
+2016-06-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Fix random order of interfaces in OpenUSBByName().  The value of static_interface should be increased for composite
+	devices only.
+
+2016-06-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Avoid libusb timeout on Mac OS X in
+	CreateChannelByNameOrChannel().
+
+2016-06-07  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Fix a race condition in CardDetectionThread().  Replace libusb_handle_events() with
+	libusb_handle_events_completed().
+
+2016-06-07  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: IFDHGetCapabilities: fix
+	SCARD_ATTR_VENDOR_IFD_SERIAL_NO size.  Merge from ccid 1.4.24.
+
+2016-06-07  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid.h: Fix support of HID Aviator generic.  Merge from ccid 1.4.24.
+
+2016-06-07  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid.h: SCM SCL011: use a 400 ms timeout instead
+	of 100 ms.  Merge from ccid 1.4.24.
+
+2016-06-07  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid.h: ElatecTWN4: use a 400 ms timeout instead
+	of 100 ms.  Merge from ccid 1.4.24.
+
+2016-06-07  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: CreateChannel: allow to use a non default
+	timeout.  Merge from 1.4.24.
+
+2016-06-07  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: ccid_usb.c: fix a race condition on multi reader.  Merge from ccid 1.4.24.
+
+2016-04-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Update the copyright in ifdhandler.c
+
+2016-04-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_ifdhandler.h: Update the copyright in ccid_ifdhandler.h.
+
+2016-04-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_ifdhandler.h, src/ifdhandler.c: Add control codes for
+	Windows compatibility.
+
+2016-04-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Update the copyright in src/ccid_usb.c.
+
+2016-04-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: get_end_points(): be more strict for
+	bInterfaceClass = 255.  Merge from ccid 1.4.15.
+
+2016-04-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Fix a busy loop consuming 100% of CPU.  Merge from ccid 1.4.23.
+
+2016-04-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: ccid_usb.c: improve close_libusb_if_needed().  Merge from ccid 1.4.23.
+
+2016-04-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Update URL in a comment.  Merge from ccid 1.4.23.
+
+2016-04-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Info.plist.src, src/ccid_ifdhandler.h, src/ccid_usb.c: Remove
+	support of DRIVER_OPTION_RESET_ON_CLOSE.  Merge from ccid 1.4.23.
+
+2016-04-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: InterruptRead(): log libusb error name.  Merge from ccid 1.4.23.
+
+2016-04-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/configure: MacOSX/configure: exit in error if configure
+	failed.  Merge from ccid 1.4.23.
+
+2016-04-18  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Break if the device was disconnected in
+	Multi_PollingProc().
+
+2016-04-01  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/supported_readers.txt: Add supported readers.  ACR1251 CL Reader (ACM1251U-Z2)
+
+2016-01-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/supported_readers.txt: Add supported readers.  ACR39U ID1 Card Reader
+
+2016-02-18  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.1.2.
+
+2016-02-18  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Update the version to 1.1.2 in configure.ac.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: OpenUSBByName(): fix possible use of uninitialized
+	variable.  Merge from ccid 1.4.22.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid.h: Patch for Cherry KC 1000 SC.  Merge from ccid 1.4.22.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h, src/commands.c: Patch for Microchip SEC1110 on Mac OS
+	X.  Merge from ccid 1.4.22.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: OpenUSBByName(): add some low level debug.  Merge from ccid 1.4.22.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: OpenUSBByName(): read Info.plist only once.  Merge from ccid 1.4.22.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: ccid.h: fix Kobil mIDentity visual identification.  Merge from ccid 1.4.22.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: OpenUSBByName(): do not call
+	close_libusb_if_needed().  Merge from ccid 1.4.22.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: CreateChannelByNameOrChannel(): call
+	FreeChannel() in case of error.  Merge from ccid 1.4.22.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: IFDHCloseChannel(): use FreeChannel().  Merge from ccid 1.4.22.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: OpenUSBByName(): use device bus and address only
+	when available.  Merge from ccid 1.4.22.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: IFDHTransmitToICC: Reuse ccid_descriptor.  Merge from ccid 1.4.22.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c, src/defs.h: Move max() definition in a header
+	file.  Merge from ccid 1.4.22.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/debuglog.h, MacOSX/ifdhandler.h, MacOSX/reader.h,
+	src/misc.h, src/parser.h, src/strlcpycat.h, src/tokenparser.l: 
+	Import files from ccid 1.4.22.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/configure, src/ccid.c, src/ccid.h, src/ccid_ifdhandler.h,
+	src/ccid_usb.c, src/ccid_usb.h, src/commands.c, src/commands.h,
+	src/debug.c, src/debug.h, src/defs.h, src/ifdhandler.c,
+	src/openct/checksum.h, src/openct/proto-t1.h, src/towitoko/README,
+	src/utils.c, src/utils.h: Comments: Remove the $Id$ tag.  Merge from ccid 1.4.22.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Update the copyright in src/ccid.c.
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Disable SetParameters for APG8201Z2 v029Z in
+	ccid_open_hack_post().
+
+2016-02-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Return the second version in
+	ACR83_GetFirmwareVersion().
+
+2015-11-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.1.1.
+
+2015-11-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Update the version to 1.1.1 in configure.ac.
+
+2015-11-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Use pthread_exit() in CardDetectionThread().
+
+2015-11-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Break if the device was disconnected in
+	CardDetectionThread().
+
+2015-11-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Fix segmentation fault on Mac OS X in
+	CardDetectionThread().  The local variable reader_index was incorrectly passed as pointer to
+	the thread.
+
+2015-10-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Info.plist.src: Info.plist: use hex values in the
+	documentation.  Merge from ccid 1.4.21.
+
+2015-10-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: OpenUSBByName(): free the device list in case of
+	error.  Merge from ccid 1.4.21.
+
+2015-10-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h, src/ccid_usb.c, src/ifdhandler.c: Add Feitain R502
+	dual interface reader into CCID driver.  The Feitian R502 DUAL reader has 3 interfaces.  Merge from ccid
+	1.4.21.
+
+2015-10-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: OpenUSBByName(): fix the order of interfaces in
+	log.  Merge from ccid 1.4.21.
+
+2015-10-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: OpenUSBByName(): add more time on Mac OS X.  Merge from ccid 1.4.21.
+
+2015-10-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Use libusb_error_name() to display the error name.  Merge from ccid 1.4.21.
+
+2015-08-10  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/configure: MacOSX/configure: use /usr/local/libexec/... on
+	El Capitan.  Merge from ccid 1.4.20.
+
+2015-08-10  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: The O2 Micro Oz776 reader only supports 9600 bps.  Merge from ccid 1.4.20.
+
+2015-07-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Update the copyright in src/ifdhandler.c.
+
+2015-07-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Update the copyright in src/commands.c.
+
+2015-07-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Update the copyright in src/ccid.h.
+
+2015-07-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Update the copyright in src/ccid.c.
+
+2015-07-24  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Patch APG8201 (PID: 8205) in ccid_open_hack_post().
+
+2015-07-24  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Return 6B 80 if the parameter is invalid in
+	SecurePINModify().
+
+2015-07-24  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Return 6B 80 if the parameter is invalid in
+	SecurePINVerify().
+
+2015-07-24  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Enable bPPDUSupport over SCardTransmit in
+	IFDHControl().
+
+2015-07-24  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Process SPE pseudo APDU in IFDHTransmitToICC().  It implements SPE pseudo APDU from PC/SC v2.02.02 Part 10
+	Supplement.
+
+2015-07-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Handle ACS_APG8201Z2 in IFDHControl().
+
+2015-07-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Add ACS_APG8201Z2 to src/ccid.h.
+
+2015-07-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/supported_readers.txt: Add supported readers.  APG8201Z (PID: 8205)
+
+2015-07-24  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Return 64 02 if two "new PIN" entries do not match
+	in CCID_Receive().
+
+2015-07-24  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Return IFD_ERROR_INSUFFICIENT_BUFFER if rx_length
+	< 2 in CCID_Receive().
+
+2015-06-04  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Update the copyright in src/acr38cmd.c.
+
+2015-06-04  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Update the copyright in src/ccid_usb.c.
+
+2015-06-04  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/supported_readers.txt: Add supported readers.  ACR3201 ICC Reader
+
+2015-06-04  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Update LIBUSB_NEEDED_VERSION to 1.0.9 in
+	configure.ac.  libusb_error_name() is available on libusb 1.0.9 or later.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Replace ccid_error() with acr38_error() in
+	ACR38_Receive().
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge src/ifdhandler.c from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.h: Import src/commands.h from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge src/commands.c from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.h: Import src/ccid_usb.h from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge src/ccid_usb.c from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_ifdhandler.h: Merge src/ccid_ifdhandler.h from ccid
+	1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Merge src/ccid.h from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Merge src/ccid.c from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/configure: Merge MacOSX/configure from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/configure, configure.ac, src/debug.c, src/debug.h: Enable
+	syslog logging on Yosemite.  Merge from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: IFDHSleep(): timout parameter is in ms not µs.  Merge from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Fix typos in comments.  Merge from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Use CmdEscapeCheck() in
+	set_gemalto_firmware_features().  Merge from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c, src/commands.h: Add CmdEscapeCheck().  Merge from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid.h, src/commands.c: Add log_level parameter to
+	ccid_error().  Merge from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Ignore errno and use libusb returned value only.  Merge from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Use libusb_error_name() instead of strerror().  Merge from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid.h, src/ccid_usb.c: Remove ZLP patch for
+	Gemalto IDBridge CT30 and K30.  Merge from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/reader.h: Import MacOSX/reader.h from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/ifdhandler.h: Import MacOSX/ifdhandler.h from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/debuglog.h: Import MacOSX/debuglog.h from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/towitoko/README: Import src/towitoko/README from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/proto-t1.h: Import src/openct/proto-t1.h from ccid
+	1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/checksum.h: Import src/openct/checksum.h from ccid
+	1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/utils.h: Import src/utils.h from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/utils.c: Import src/utils.c from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/tokenparser.l: Import src/tokenparser.l from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/strlcpycat.h: Import src/strlcpycat.h from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/strlcpy.c: Import src/strlcpy.c from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/parser.h: Import src/parser.h from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/misc.h: Import src/misc.h from ccid 1.4.19.
+
+2015-06-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/defs.h: Merge src/defs.h from ccid 1.4.19.
+
+2015-05-11  Eugene Crosser <crosser@average.org>
+
+	* src/ccid_usb.c: Workaround for APDU sequence bug in ACR122U Older versions of ACR122U USB NFC reader have a bug: if last APDU
+	written to the device was longer than 54 bytes, then response APDU
+	read from the device has sequence number one less than it must be.
+	Vendor says that this bug is fixed in the devices manufactured later
+	than certain date.  This patch accepts response APDU with off by one
+	sequence number if they arrive from this reader, and previously sent
+	APDU was long enough to trigger the problem.  Signed-off-by: Eugene Crosser <crosser@average.org>
+
+2015-02-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/supported_readers.txt: Add supported readers.  ACR1251 Reader.
+
+2014-12-29  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Fix uninitialized variable warning in
+	ACR38_CmdPowerOn().
+
+2014-12-18  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Fix the mutex lock problem in
+	Multi_InterruptRead().  The mutex is not locked if the code go to again label.
+
+2014-12-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.1.0.
+
+2014-12-10  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Convert ACR38 card status message in
+	Multi_PollingProc().
+
+2014-12-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Makefile.am: Remove the files from EXTRA_DIST in
+	src/Makefile.am.  pcscd_acsccid.rules 92_pcscd_acsccid_group.rules
+
+2014-12-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/92_pcscd_acsccid_group.rules: Remove
+	src/92_pcscd_acsccid_group.rules.
+
+2014-12-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules: Remove src/pcscd_acsccid.rules.
+
+2014-12-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* INSTALL: Remove libusb version from INSTALL.
+
+2014-12-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* NEWS: Import NEWS from ccid 1.4.18.
+
+2014-12-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Update the version to 1.1.0 in configure.ac.
+
+2014-12-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Disable InterruptRead() on Mac OS X in
+	ccid_open_hack_pre().
+
+2014-12-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Enable InterruptRead() for ACR38 in
+	ccid_open_hack_pre().
+
+2014-12-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/configure: Add ppc to CFLAGS if Mac OS X 10.6 SDK exists in
+	MacOSX/configure.
+
+2014-12-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/configure: Remove -isysroot from CFLAGS in
+	MacOSX/configure.
+
+2014-12-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Update the copyright in src/commands.c.
+
+2014-12-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_ifdhandler.h: Update the copyright in
+	src/ccid_ifdhandler.h.
+
+2014-12-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Update the copyright in src/acr38cmd.c.
+
+2014-12-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Update the copyright in src/ccid.c.
+
+2014-12-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Disable multislot extension for ACR85 in
+	OpenUSBByName().
+
+2014-12-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Replace InterruptRead() in CardDetectionThread().
+
+2014-12-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Cancel the transfer and free transfer lock in
+	CloseUSB().
+
+2014-12-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Initialize the pointer to libusb transfer in
+	OpenUSBByName().
+
+2014-12-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Create transfer lock in OpenUSBByName().
+
+2014-12-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add the pointer to libusb transfer to _usbDevice
+	in src/ccid_usb.c.
+
+2014-12-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add libusb transfer lock to _usbDevice in
+	src/ccid_usb.c.
+
+2014-12-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Disable multislot extension on Mac OS X in
+	OpenUSBByName().
+
+2014-12-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Remove bStatus lock/unlock from InterruptRead().
+
+2014-12-04  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Check rv < 0 for libusb_submit_transfer() in
+	Multi_PollingProc().
+
+2014-12-04  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add missing libusb_free_transfer() to
+	Multi_PollingProc().
+
+2014-12-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Fix parentheses warning in IFDHICCPresence().
+
+2014-12-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Fix parentheses warning in IFDHPowerICC().
+
+2014-12-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Fix parentheses warning in
+	IFDHSetProtocolParameters().
+
+2014-12-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Remove IFD_ERROR_INSUFFICIENT_BUFFER from
+	src/acr38cmd.c.
+
+2014-12-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Include <unistd.h> in src/ccid_usb.c.
+
+2014-12-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Fix data type warning in init_driver().
+
+2014-12-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Fix data type warning in
+	IFDHSetProtocolParameters().
+
+2014-12-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Fix data type warning in ACR38_SetCardType().
+
+2014-12-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Remove unused ccid_descriptor from
+	ACR38_GetFirmwareVersion().
+
+2014-12-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Update the included headers in src/acr38cmd.c.
+
+2014-12-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Remove unused slot_index from
+	IFDHTransmitToICC().
+
+2014-12-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Remove unused tempLen from ReadUSB().
+
+2014-12-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Fix incorrect data type for responseLen in
+	EnablePicc().
+
+2014-12-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Replace DEBUG_INFO with DEBUG_INFO1 in
+	IFDHICCPresence().
+
+2014-12-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Replace DEBUG_INFO with DEBUG_INFO1 in
+	ccid_open_hack_post().
+
+2014-12-01  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Enable polling thread for ACR38 in
+	IFDHGetCapabilities().
+
+2014-11-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Remove InterruptRead() from IFDHICCPresence().
+
+2014-11-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Return the properties for ACR83, APG8201 and
+	APG8201Z in IFDHControl().  bMinPINSize, bMaxPINSize and bEntryValidationCondition.
+
+2014-11-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Enable bPPDUSupport in IFDHControl().
+
+2014-11-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Use IOCTL_CCID_ESCAPE for
+	FEATURE_CCID_ESC_COMMAND in IFDHControl().
+
+2014-11-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Set infinite timeout in CmdEscape().
+
+2014-11-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Info.plist.src, src/ccid_ifdhandler.h, src/ifdhandler.c: Move
+	REMOVE_PUPI_FROM_ATR and DISABLE_PICC to ifdACSDriverOptions.
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Info.plist.src: Merge src/Info.plist.src from ccid 1.4.18.
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Set the timeout to zero in
+	ACR1222_GetFirmwareVersion().
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Set the timeout to zero in ACR83_DisplayLcdMessage().
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Set the timeout to zero in ACR83_GetFirmwareVersion().
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Set the timeout to zero in EnablePicc().
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge T1_card_timeout() in src/ifdhandler.c from
+	ccid 1.4.18.
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge T0_card_timeout() in src/ifdhandler.c from
+	ccid 1.4.18.
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge extra_egt() in src/ifdhandler.c from ccid
+	1.4.18.
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge init_driver() in src/ifdhandler.c from
+	ccid 1.4.18.
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge IFDHICCPresence() in src/ifdhandler.c from
+	ccid 1.4.18.
+
+2014-12-02  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Allow 7 records for CM_IOCTL_GET_FEATURE_REQUEST
+	in IFDHControl().
+
+2014-12-02  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Set the timeout in IFDHControl().
+
+2014-12-02  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge IFDHControl() in src/ifdhandler.c from
+	ccid 1.4.18.
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Remove the checking of PROTOCOL_ACR38 from
+	IFDHControl().
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge IFDHTransmitToICC() in src/ifdhandler.c
+	from ccid 1.4.18.
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge IFDHPowerICC() in src/ifdhandler.c from
+	ccid 1.4.18.
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge IFDHSetProtocolParameters() in
+	src/ifdhandler.c from ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge IFDHSetCapabilities() in src/ifdhandler.c
+	from ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge IFDHGetCapabilities() in src/ifdhandler.c
+	from ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Add IFDHStopPolling() in src/ifdhandler.c from
+	ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge IFDHSleep() in src/ifdhandler.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge IFDHPolling() in src/ifdhandler.c from
+	ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge IFDHCloseChannel() in src/ifdhandler.c
+	from ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge IFDHCreateChannel() in src/ifdhandler.c
+	from ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge IFDHCreateChannelByName() in
+	src/ifdhandler.c from ccid 1.4.18.
+
+2014-12-01  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Remove the prototypes from src/ifdhandler.c.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Remove IFD_ERROR_INSUFFICIENT_BUFFER from
+	src/ifdhandler.c.
+
+2014-12-01  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge the included headers in src/ifdhandler.c
+	from ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Merge the copyright in src/ifdhandler.c from
+	ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.h: Import src/commands.h from ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Add bei2i() to src/commands.c from ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge SetParameters() in src/commands.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge CmdXfrBlockCHAR_T0() in src/commands.c from
+	ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge T0ProcACK() in src/commands.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge CmdXfrBlockAPDU_extended() in src/commands.c
+	from ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge CCID_Receive() in src/commands.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge CCID_Transmit() in src/commands.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Remove space character from CmdXfrBlock().
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge CmdGetSlotStatus() in src/commands.c from
+	ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge CmdPowerOff() in src/commands.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge CmdEscape() in src/commands.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge SecurePINModify() in src/commands.c from
+	ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Add has_gemalto_modify_pin_bug() to src/commands.c
+	from ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge SecurePINVerify() in src/commands.c from
+	ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge CmdPowerOn() in src/commands.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge prototypes in src/commands.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge the macros in src/commands.c from ccid
+	1.4.18.
+
+2014-12-01  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge the included headers in src/commands.c from
+	ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Merge the copyright in src/commands.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.h: Import src/ccid_usb.h from ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add Multi_CreateNextSlot() to src/ccid_usb.c from
+	ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add Multi_CreateFirstSlot() to src/ccid_usb.c from
+	ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add Multi_InterruptStop() to src/ccid_usb.c from
+	ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add Multi_InterruptRead() to src/ccid_usb.c from
+	ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add Multi_PollingTerminate() to src/ccid_usb.c
+	from ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add Multi_PollingProc() to src/ccid_usb.c from
+	ccid 1.4.18.
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add InterruptStop() to src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge InterruptRead() in src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add bulk_transfer_cb() to src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge ControlUSB() in src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge get_data_rates() in src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge ccid_check_firmware() in src/ccid_usb.c from
+	ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge get_ccid_usb_interface() in src/ccid_usb.c
+	from ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge get_end_points() in src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add get_ccid_device_descriptor() to src/ccid_usb.c
+	from ccid 1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge CloseUSB() in src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge ReadUSB() in src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge WriteUSB() in src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge the changes to OpenUSBByName().
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Import OpenUSBByName() to src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge OpenUSB() in src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add close_libusb_if_needed() to src/ccid_usb.c
+	from ccid 1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge Bogus_firmwares in src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge the macros in src/ccid_usb.c from ccid
+	1.4.18.  PCSCLITE_MANUKEY_NAME, PCSCLITE_PRODKEY_NAME and
+	PCSCLITE_NAMEKEY_NAME.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge prototypes in src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge _usbDevice in src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add usbDevice_MultiSlot_Extension to
+	src/ccid_usb.c from ccid 1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add CCID_INTERRUPT_SIZE to src/ccid_usb.c from
+	ccid 1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add libusb context to src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge the macros in src/ccid_usb.c from ccid
+	1.4.18.  USB_WRITE_TIMEOUT and ALLOW_PROPRIETARY_CLASS.
+
+2014-12-01  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge the included headers in src/ccid_usb.c from
+	ccid 1.4.18.
+
+2014-11-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Merge the copyright in src/ccid_usb.c from ccid
+	1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Revert "Abort the interrupt pipe on Mac OS X." This reverts commit 15c6aa0addd7d41ab179d30c60ab343dc8b53599.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_ifdhandler.h: Merge src/ccid_ifdhandler.h from ccid
+	1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Merge src/ccid.h from ccid 1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Add NO_LOG to acr38_error().
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Merge ccid_error() from ccid 1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Merge ccid_open_hack_post() from ccid 1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Add set_gemalto_firmware_features() to src/ccid.c from
+	ccid 1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Add dump_gemalto_firmware_features() to src/ccid.c
+	from ccid 1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Merge ccid_open_hack_pre() from ccid 1.4.18.
+
+2014-12-01  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Merge the included headers in src/ccid.c from ccid
+	1.4.18.
+
+2014-11-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Merge the copyright in src/ccid.c from ccid 1.4.18.
+
+2014-11-24  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Makefile.am: Add simclist.c and simclist.h to TOKEN_PARSER in
+	src/Makefile.am.
+
+2014-11-24  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/defs.h: Merge src/defs.h from ccid 1.4.18.
+
+2014-11-24  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* Makefile.am: Rename reader.h.in to reader.h in Makefile.am.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/configure: Import MacOSX/configure from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/reader.h.in: Remove MacOSX/reader.h.in.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/reader.h: Import MacOSX/reader.h from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/ifdhandler.h: Import MacOSX/ifdhandler.h from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/debuglog.h: Import MacOSX/debuglog.h from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/towitoko/pps.c: Merge src/towitoko/pps.c from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/towitoko/defines.h: Import src/towitoko/defines.h from ccid
+	1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/towitoko/atr.h: Import src/towitoko/atr.h from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/towitoko/atr.c: Import src/towitoko/atr.c from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/proto-t1.h: Import src/openct/proto-t1.h from ccid
+	1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/proto-t1.c: Merge src/openct/proto-t1.c from ccid
+	1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/checksum.h: Import src/openct/checksum.h from ccid
+	1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/checksum.c: Import src/openct/checksum.c from ccid
+	1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/buffer.h: Import src/openct/buffer.h from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/buffer.c: Import src/openct/buffer.c from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/utils.h: Import src/utils.h from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/utils.c: Import src/utils.c from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/tokenparser.l: Import src/tokenparser.l from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/strlcpycat.h: Import src/strlcpycat.h from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/simclist.h: Import src/simclist.h from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/simclist.c: Import src/simclist.c from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/parser.h: Import src/parser.h from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/misc.h: Import src/misc.h from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/debug.h: Import src/debug.h from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/debug.c: Import src/debug.c from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/create_Info_plist.pl: Import src/create_Info_plist.pl from
+	ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/convert_version.pl: Import src/convert_version.pl from ccid
+	1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* m4/ax_pthread.m4: Import m4/ax_pthread.m4 from ccid 1.4.18.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Makefile.am: Remove --ifdCapabilities and --bundle from
+	src/Makefile.am.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Makefile.am: Remove UDEV from src/Makefile.am.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Remove udev from configure.ac.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Remove use_usb_interrupt from configure.ac.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Add --enable-embedded option to configure.ac.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Remove --enable-udev option from configure.ac.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Replace ACX_PTHREAD with AX_PTHREAD in configure.ac.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Replace AC_HELP_STRING with AS_HELP_STRING in
+	configure.ac.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Replace libusb 0.1.12 with 1.0.8 in configure.ac.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Use uname to return OS in configure.ac.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Add stdio.h to AC_CHECK_HEADERS in configure.ac.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Update PCSC_NEEDED_VERSION to 1.8.3 in configure.ac.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Add AM_PROG_AR to configure.ac.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Replace AM_CONFIG_HEADER with AC_CONFIG_HEADERS in
+	configure.ac.
+
+2014-11-21  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Update AC_PREREQ to 2.69 in configure.ac.
+
+2014-08-15  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/supported_readers.txt: Add supported readers.  ACR1255U-J1 PICC Reader.
+
+2014-09-10  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Fix the PICC detection problem in ACR1281 2S CL
+	Reader.
+
+2014-08-15  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/supported_readers.txt: Correct the product code in
+	src/supported_readers.txt.
+
+2014-08-15  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Correct the product code in README.
+
+2014-07-04  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Correct the reader name in README.
+
+2014-07-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.8.
+
+2014-07-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Update the version to 1.0.8 in configure.ac.
+
+2014-07-02  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Change the delay of cold reset in
+	ACR38_CmdPowerOn().
+
+2014-07-02  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Change the delay of cold reset to 10 ms in
+	IFDHPowerICC().
+
+2014-07-02  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Change the delay of cold reset to 10 ms in
+	IFDHSetProtocolParameters().
+
+2014-07-02  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Remove the checking of specific mode in
+	IFDHSetProtocolParameters().
+
+2014-06-23  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid.h, src/ccid_usb.c: Patch ACR1261 1S Dual
+	Reader.
+
+2014-06-23  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/92_pcscd_acsccid_group.rules, src/pcscd_acsccid.rules,
+	src/supported_readers.txt: Add supported readers.  ACR1261 1S Dual Reader and ACR1252U BADANAMU MAGIC READER.
+
+2014-06-16  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.7.
+
+2014-06-16  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* Makefile.am: Remove ChangeLog from DISTCLEANFILES in Makefile.am.
+
+2014-06-16  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Update the version to 1.0.7 in configure.ac.
+
+2014-06-16  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid.h, src/ccid_usb.c: Patch ACR1251 1S Dual
+	Reader.
+
+2014-06-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/92_pcscd_acsccid_group.rules, src/pcscd_acsccid.rules,
+	src/supported_readers.txt: Add supported readers.  ACR1251 1S Dual Reader, CryptoMate (T1) and CryptoMate (T2).
+
+2014-06-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Fix ACR39U card power on problem in
+	IFDHPowerICC().
+
+2014-04-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.6.
+
+2014-04-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/proto-t1.c: Cast t1->rc_bytes to int in
+	t1_negotiate_ifsd().
+
+2014-04-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/proto-t1.c: Go to error if retries <= 0 in
+	t1_negotiate_ifsd().
+
+2014-04-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/proto-t1.c: Move m variable to if block in t1_xcv().
+
+2014-04-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/proto-t1.c: Remove the redundant rmax assignment in
+	t1_xcv().
+
+2014-04-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/proto-t1.c: Return -1 if ccid_slot->pTransmitT1()
+	failed in t1_xcv().
+
+2014-04-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/proto-t1.c: Go to resync if retries <= 0 in
+	t1_transceive().
+
+2014-04-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/proto-t1.c: Remove the unused sent_length variable in
+	t1_transceive().
+
+2014-04-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/proto-t1.c: Unreference t1 parameter in t1_release().
+
+2014-04-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/towitoko/atr.c: Fix the buffer overflow in
+	ATR_InitFromArray().
+
+2014-04-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* Makefile.am: Update the libtool in Makefile.am.
+
+2014-04-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Replace AM_PROG_LIBTOOL with LT_INIT in
+	configure.ac.
+
+2014-04-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Update the copyright in src/ifdhandler.c.
+
+2014-04-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Update the copyright in src/ccid_usb.c.
+
+2014-04-17  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Update the copyright in src/ccid.h.
+
+2014-04-15  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Get the data rates if it is supported in
+	OpenUSBByName().
+
+2014-04-15  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* Makefile.am, configure.ac, m4/Makefile.am: Add m4/ax_pthread.m4 to
+	EXTRA_DIST in Makefile.am.
+
+2014-04-15  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* Makefile.am: Add ChangeLog to EXTRA_DIST in Makefile.am.
+
+2014-04-15  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Makefile.am: Add 92_pcscd_acsccid_group.rules to EXTRA_DIST in
+	src/Makefile.am.
+
+2014-04-15  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Fix ACR32 incorrect max slot index in
+	OpenUSBByName().
+
+2014-04-15  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c, src/ifdhandler.c: Patch ACR1252 1S CL Reader.
+
+2014-04-15  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c, src/ifdhandler.c: Patch ACR1251K Dual Reader.
+
+2014-04-15  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Add the reader IDs to src/ccid.h for special handling.  ACR32 ICC Reader, ACR1251K Dual Reader and ACR1252 1S CL Reader.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules: Use ATTRS{bInterfaceClass}=="0b" in
+	src/pcscd_acsccid.rules.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/supported_readers.txt: Add supported readers.  ACR32 ICC Reader, ACR1251K Dual Reader, ACR1252 1S CL Reader,
+	ACR1252 CL Reader, ACR1252 USB FW_Upgrade v100 and ACR1256U PICC
+	Reader.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Update the version to 1.0.6 in configure.ac.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Add subdir-objects option to AM_INIT_AUTOMAKE in
+	configure.ac.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Set AC_CONFIG_MACRO_DIR to m4 in configure.ac.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* .gitignore: Add .gitignore.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.5.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Update the copyright in src/ifdhandler.c.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Update the copyright in src/ccid_usb.c.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Update the copyright in src/ccid.h.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Update the copyright in src/ccid.c.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Update the copyright in src/acr38cmd.c.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c, src/ifdhandler.c: Patch ACR1251U-C SAM.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Patch ACR123 in ccid_open_hack_post().
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Patch ACR1281U-K in ccid_open_hack_post().
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Add the reader IDs to src/ccid.h for special handling.  ACR123 3S Reader, ACR1251U-C Smart Card Reader (SAM), ACR1281U-K
+	Dual Reader, ACR1281U-K 1S Dual Reader and ACR1281U-K 4S Dual
+	Reader.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules, src/supported_readers.txt: Add supported
+	readers.  ACR3901U ICC Reader, ACR123 3S Reader, ACR123 PICC Reader,
+	ACR123US_BL, ACR1251U-C Smart Card Reader (SAM), ACR1251U-C Smart
+	Card Reader, ACR1281U-K PICC Reader, ACR1281U-K Dual Reader,
+	ACR1281U-K 1S Dual Reader and ACR1281U-K 4S Dual Reader.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/92_pcscd_acsccid.rules: Add src/92_pcscd_acsccid.rules to
+	remove pcscd group support.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/92_pcscd_acsccid.rules, src/92_pcscd_acsccid_group.rules: 
+	Rename src/92_pcscd_acsccid.rules to
+	src/92_pcscd_acsccid_group.rules.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/debug.c, src/debug.h: Fix the debug mode starting problem on
+	Mac OS X 10.8.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Read the data from interrupt endpoint in
+	IFDHICCPresence().  It applies to all readers.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c, src/ifdhandler.c: Fix ACR38U card type reading
+	problem from Info.plist on Linux x64.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Update the version to 1.0.5 in configure.ac.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.4.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* INSTALL: Add INSTALL.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Makefile.am: Remove the symbolic link creation in
+	src/Makefile.am.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Makefile.am: Update INSTALL_UDEV_RULE_FILE in src/Makefile.am.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Makefile.am: Add 92_pcscd_acsccid.rules to EXTRA_DIST in
+	src/Makefile.am.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Makefile.am: Add -avoid-version to libacsccid_la_LDFLAGS in
+	src/Makefile.am.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Read the data from interrupt endpoint in
+	IFDHICCPresence().  Add ACR1283.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Display the default message for ACR83U.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Abort the interrupt pipe on Mac OS X.  It fixes the segmentation fault when unloading the driver on Mac OS
+	X.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Remove tab in CloseUSB().
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Return the error if usb_control_msg() failed in
+	ControlUSB().  It fixes a bug that APG8201 causes the segmentation fault with
+	pcsc-lite 1.8.2.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Add libudev support in OpenUSBByName().  It fixes a bug that only the first slot of reader (composite device)
+	can be used if pcsc-lite is compiled with libudev support.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c, src/ifdhandler.c: Patch ACR1251.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid_usb.c: Fix the SAM slot support for ACR1281
+	1S PICC Reader.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Patch ACR39U-SAM in ccid_open_hack_post().
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Patch ACR1283 in ccid_open_hack_post().
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Add the reader IDs to src/ccid.h for special handling.  ACR39U-SAM ICC Reader, ACR1251 1S CL Reader, ACR1283 4S CL Reader,
+	ACR1283 CL Reader and ACR1283U FW Upgrade.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/92_pcscd_acsccid.rules: Add the line spacing to
+	src/92_pcscd_acsccid.rules.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules, src/supported_readers.txt: Add supported
+	readers.  ACR39U ICC Reader, ACR39K ICC Reader, ACR39T ICC Reader, ACR39F ICC
+	Reader, ACR39U-SAM ICC Reader, ACR1251 1S CL Reader, ACR1251 CL
+	Reader, ACR122U (222D), ACR1283 4S CL Reader, ACR1283 CL Reader and
+	ACR1283U FW Upgrade.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* AUTHORS: Update AUTHORS.  Carlos Prados, Olaf Kirch and Matthias Bruestle.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Add disable-static option to LT_INIT in
+	configure.ac.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Simplify the pcsc-lite header files checking in
+	configure.ac.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Add AM_SILENT_RULES for silent build in
+	configure.ac.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Add foreign option to AM_INIT_AUTOMAKE in
+	configure.ac.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Update the version to 1.0.4 in configure.ac.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.3.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Update the copyright in src/ifdhandler.c.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/defs.h: Update the copyright in src/defs.h.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Update the copyright in src/commands.c.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Update the copyright in src/ccid_usb.c.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_ifdhandler.h: Update the copyright in
+	src/ccid_ifdhandler.h.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Update the copyright in src/ccid.h.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Update the copyright in src/ccid.c.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.h: Update the copyright in src/acr38cmd.h.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Update the copyright in src/acr38cmd.c.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/towitoko/pps.c: Update the copyright in src/towitoko/pps.c.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/openct/proto-t1.c: Update the copyright in
+	src/openct/proto-t1.c.
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Remove the redundant code in ccid_error().
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Add AET65 to handle the specific I/O controls in
+	IFDHControl().
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Change the return value to
+	IFD_ERROR_NOT_SUPPORTED in IFDHControl().
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Unreference RecvPci parameter in
+	IFDHTransmitToICC().
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Change the read timeout to 10 seconds in
+	IFDHPowerICC().
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Remove the remarked code in
+	IFDHSetCapabilities().
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Unreference Length and Value parameters in
+	IFDHSetCapabilities().
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Try 10 times to warm up the reader in
+	IFDCreateChannel().
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Try 10 times to warm up the reader in
+	IFDCreateChannelByName().
+
+2014-04-14  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Move config.h before misc.h in src/ifdhandler.c.
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Remove tx_length checking in ACR38_TransmitPPS().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Replace CMD_BUF_SIZE with tx_length in
+	ACR38_TransmitPPS().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Remove tx_length checking in ACR38_TransmitT1().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Replace CMD_BUF_SIZE with tx_length in
+	ACR38_TransmitT1().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Remove tx_length checking in ACR38_TransmitT0().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Replace CMD_BUF_SIZE with tx_length in
+	ACR38_TransmitT0().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c: Power off the SAM card in ACR38_CmdPowerOn().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Remove length checking in SetParameters().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Replace CMD_BUF_SIZE with length in
+	SetParameters().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Fix the length problem in CmdXfrBlockCHAR_T0().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Remove the unused code in T0ProcSW1().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Initialize local_rx_length to zero in
+	CmdXfrBlockAPDU_extended().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Store the return value to rx_length in
+	CCID_Receive().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Remove tx_length checking in CCID_Transmit().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Cast tx_buffer to unsigned char * from
+	ControlUSB() in CCID_Transmit().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Replace CMD_BUF_SIZE with tx_length in
+	CCID_Transmit().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Ignore ICC_MUTE error in CmdGetSlotStatus().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Remove the trailing whitespace in
+	CmdGetSlotStatus().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Fix the memory leak of cmd_out in CmdEscape().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Decrement the sequence numbers if CCID is failed
+	in SecurePINModify().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Remove the starting whitespace in
+	SecurePINModify().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Ignore the return value from t1_build() in
+	SecurePINModify().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Remove TxLength checking in SecurePINModify().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Replace CMD_BUF_SIZE with TxLength in
+	SecurePINModify().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Decrement the sequence numbers if CCID is failed
+	in SecurePINVerify().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Ignore the return value from t1_build() in
+	SecurePINVerify().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Remove TxLength checking in SecurePINVerify().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Replace CMD_BUF_SIZE with TxLength in
+	SecurePINVerify().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Cast *nlength to int in CmdPowerOn().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Fix duplicate offsetof in src/commands.c.
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Remove ccid_usb.h in src/commands.c.
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Move config.h before misc.h in src/commands.c.
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/defs.h: Remove the unused macros in src/defs.h.
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Replace RESP_BUF_SIZE with 10 + MAX_ATR_SIZE in
+	IFDHPowerICC().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/defs.h: Remove RESP_BUF_SIZE in src/defs.h.
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/defs.h: Change CMD_BUF_SIZE for extended APDU in src/defs.h.
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Fix incorrect IFSC in
+	IFSHSetProtocolParameters().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Handle the tags in IFDHGetCapabilities().  SCARD_ATTR_ICC_INTERFACE_STATUS and SCARD_ATTR_ICC_PRESENCE.
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Set the default T=0 in
+	IFDHSetProtocolParameters().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Patch ACR1281 in ccid_open_hack_post().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Patch ACR128U in ccid_open_hack_post().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Patch ACR89 in ccid_open_hack_post().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Patch ACR88U in ccid_open_hack_post().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Patch ACR1222 in ccid_open_hack_post().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Patch ACR33U in ccid_open_hack_post().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Add the default case in ccid_open_hack_pre().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Patch AET62 in ccid_open_hack_pre().
+
+2014-04-11  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid_usb.c: Patch AET65.
+
+2014-04-10  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h, src/ccid_usb.c, src/ifdhandler.c: Enable the SAM slot
+	support.
+
+2014-04-10  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Fix ACR1222 incorrect max slot index.
+
+2014-04-10  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Add the reader IDs to src/ccid.h for special handling.  ACR33U-A1 3SAM ICC Reader, ACR33U-A2 3SAM ICC Reader, ACR33U-A3 3SAM
+	ICC Reader, ACR33U 4SAM ICC Reader, ACR89 ICC Reader, ACR89 Dual
+	Reader, ACR89 FP Reader, ACR1222 1SAM PICC Reader, ACR1222 3S PICC
+	Reader, AET62 PICC Reader, AET62 1SAM PICC Reader, AET65 1SAM ICC
+	Reader.
+
+2014-04-09  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/92_pcscd_acsccid.rules, src/pcscd_acsccid.rules,
+	src/supported_readers.txt: Add supported readers.  ACR89 ICC Reader, ACR89 Dual Reader, ACR89 FP Reader, AET62 PICC
+	Reader, AET62 1SAM PICC Reader, AET65 ICC Reader, AET65 1SAM ICC
+	Reader and CryptoMate64.  Rename "ACR33 ICC Reader" to "ACS ACR33U-A1 3SAM ICC Reader", "ACS
+	ACR33U-A2 3SAM ICC Reader", "ACS ACR33U-A3 3SAM ICC Reader" and "ACS
+	ACR33U 4SAM ICC Reader".
+
+2014-04-09  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.3 (30/11/2011).
+
+2014-04-09  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Add APG8201Z to the specific I/O controls in
+	IFDHControl().
+
+2014-04-09  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Add the vendor specific feature to APG8201Z in
+	IFDHControl().
+
+2014-04-09  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Patch APG8201Z in ccid_open_hack_post().
+
+2014-04-09  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Add the reader IDs to src/ccid.h for special handling.  APG8201Z.
+
+2014-04-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules, src/supported_readers.txt: Add supported
+	readers.  APG8201Z, ACR1222 1SAM PICC Reader (ACR1222U-C1) and ACR1222 1SAM
+	PICC Reader (ACR1222U-C8).  Rename "ACR1222L 3S CL Reader" to "ACR1222 3S PICC Reader".
+
+2014-04-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.3 (20/10/2011).
+
+2014-04-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Info.plist.src, src/ccid.h, src/ccid_usb.c, src/ifdhandler.c: 
+	Remove the trailing whitespace.
+
+2014-04-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Info.plist.src, src/ccid.h, src/ccid_usb.c, src/ifdhandler.c: 
+	Add the driver options to ACR38U, ACR38U-SAM and SCR21U.  ifdACR38CardVoltage: Card voltage selection.  ifdACR38CardType: Card type selection.
+
+2014-04-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c, src/openct/proto-t1.c, src/towitoko/pps.c: 
+	Replace the CCID functions with the reader operations.
+
+2014-04-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Assign the reader operations in
+	IFDHCreateChannel().
+
+2014-04-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Assign the reader operations in
+	IFDHCreateChannelByName().
+
+2014-04-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/defs.h: Add the reader operations to CcidDesc.
+
+2014-04-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_ifdhandler.h, src/ifdhandler.c: Handle ACR38U, ACR38U-SAM
+	and SCR21U specific controls.
+
+2014-04-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Process ACR38 protocol in ReadUSB().
+
+2014-04-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid.h, src/ccid_usb.c: Patch ACR38U, ACR38U-SAM,
+	SCR21U (IRIS) and CryptoMate.
+
+2014-04-08  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Add the reader IDs to src/ccid.h for special handling.  ACR38U, ACR38U-SAM, SCR21U (IRIS) and CryptoMate.
+
+2014-04-07  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid.h: Add acr38_error().
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Makefile.am: Add acr38cmd.c and acr38cmd.h to COMMON in
+	src/Makefile.am.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/acr38cmd.c, src/acr38cmd.h: Add acr38cmd.c and acr38cmd.h.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/92_pcscd_acsccid.rules, src/pcscd_acsccid.rules,
+	src/supported_readers.txt: Add supported readers.  ACR38U, ACR38U-SAM, SCR21U (IRIS) and CryptoMate.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* Makefile.am: Add bootstrap to EXTRA_DIST in Makefile.am.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Use AC_LANG_SOURCE in configure.ac.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Remove duplicate error.h from AC_CHECK_HEADERS in
+	configure.ac.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Check if the card supports the protocol in
+	IFDHSetProtocolParameters().  Return IFD_ERROR_PTS_FAILURE if the card does not support the
+	protocol.  On Mac OS X 10.6, pcscd will select the wrong protocol if
+	Starcos 3.2 card is inserted.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.3 (19/9/2011).
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules, src/supported_readers.txt: Change the
+	ACR33 PID from 0x8306 to 0x8307.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c, src/ifdhandler.c: Patch ACR1281 1S PICC Reader.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Add the reader IDs to src/ccid.h for special handling.  ACR1281 1S PICC Reader.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules, src/supported_readers.txt: Add supported
+	readers.  ACR1281 1S PICC Reader.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.3 (20/7/2011).
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Enable ACR85 PICC firmware fix in
+	ccid_open_hack_post().
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Enable ACR1222 firmware fix in ccid_open_hack_post().
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Enable ACR85 ICC firmware fix in
+	ccid_open_hack_post().
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Replace firmwareVersion with firmwareFixEnabled.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h, src/ccid_usb.c: Add firmwareFixEnabled to
+	_ccid_descriptor.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Fix ACR1281 incorrect dwMaxDataRate in
+	ccid_open_hack_post().
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Fix ACR128U incorrect dwMaxDateRate in
+	ccid_open_hack_post().
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Fix ACR88U incorrect dwMaxDateRate in
+	ccid_open_hack_post().
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Use ACR83_GetFirmareVersion() for ACR83U in
+	ccid_open_hack_post().
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Rename GetFirmwareVersion() to
+	ACR1222_GetFirmwareVersion().
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Add ACR83_GetFirmwareVersion().
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules, src/supported_readers.txt: Add supported
+	readers.  ACR33 ICC Reader.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.3 (24/6/2011).
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_ifdhandler.h, src/ifdhandler.c: Handle
+	IOCTL_ACR128_READER_COMMAND.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.3 (23/6/2011).
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_ifdhandler.h: Fix the missing FEATURE_MCT_READERDIRECT.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid_usb.c: Patch ACR1281 2S CL Reader.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid_usb.c: Fix ACR1281 1S Dual Reader incorrect
+	dwFeatures and dwMaxDateRate.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Add to reader IDs to src/ccid.h for special handling.  ACR1281 2S CL Reader.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/92_pcscd_acsccid.rules, src/pcscd_acsccid.rules,
+	src/supported_readers.txt: Add supported readers.  ACR1281 2S CL Reader.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.3 (8/6/2011).
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Remove the log of bMaxSlotIndex in
+	OpenUSBByName().
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Log the CCID descriptor in IFDHCreateChannel().
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Log the CCID descriptor in
+	IFDHCreateChannelByName().
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Remove the code to store bStatus in
+	IFDHICCPresence().
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Add BSI miscellaneous command in
+	IFDHTransmitToICC().  This command is to return the driver version for ACR1281 BSI
+	readers.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid_usb.c: Patch ACR1281 1S Dual Reader.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Add the reader IDs to src/ccid.h for special handling.  ACR1281 PICC Reader (qPBOC) and ACR1281 1S Dual Reader.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules, src/supported_readers.txt: Add supported
+	readers.  ACR1281 PICC Reader (qPBOC) and ACR1281 1S Dual Reader.
+
+2014-04-06  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid_usb.c: Fix ACR88U and ACR128U incorrect
+	dwFeatures and dwMaxDateRate.
+
+2014-04-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Fix the optimal baud rate problem in
+	IFDHSetProtocolParameters().  Performs cold reset and try the default Fl/Dl (0x11) if
+	PPS_Exchange() or SetParameters() is failed. The protocol parameters
+	will be set if the card is running in specific mode.
+
+2014-04-05  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Enable the polling mode for ACR122U in
+	ccid_open_hack_pre().
+
+2014-04-04  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Fix ACR85 PICC hang problem in
+	IFDHTransmitToICC().  It checks the card status before exchanging the APDU.
+
+2014-04-04  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/92_pcscd_acsccid.rules: Add src/92_pcscd_acsccid.rules to
+	support pcscd auto-start.
+
+2014-04-04  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* bootstrap: Set the execute bit and remove autom4te.cache in
+	bootstrap.
+
+2014-04-04  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Update the version to 1.0.3 in configure.ac.
+
+2014-04-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Add authors, copyright and license to README.
+
+2014-04-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.2 (16/3/2011).
+
+2014-04-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules, src/supported_readers.txt: Add supported
+	readers.  ACR3801.
+
+2014-04-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Store the card status in IFDHICCPresence().
+
+2014-04-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Fix ACR85 PICC hang problem in
+	IFDHTransmitToICC().  Before transmitting the APDU or 63 00 is received, return
+	IFD_ICC_NOT_PRESENT if no card is inserted.
+
+2014-04-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.2 (21/2/2011).
+
+2014-04-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c, src/ccid.h, src/ccid_usb.c, src/ifdhandler.c: Limit
+	the driver options for ACR1222 v401 only.
+
+2014-04-03  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c, src/pcscd_acsccid.rules,
+	src/supported_readers.txt: Simulate ACR85 as multi-slot reader.  The first slot is ICC and the second slot is PICC.
+
+2014-04-02  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Info.plist.src, src/ccid.c, src/ccid_usb.c, src/ifdhandler.c: 
+	Add the driver options to ACR85.
+
+2014-04-02  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.2 (14/2/2011).
+
+2014-04-01  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Info.plist.src, src/ccid.c, src/ccid.h,
+	src/ccid_ifdhandler.h, src/ccid_usb.c, src/ifdhandler.c: Add the
+	driver options to ACR1222.  These options are enabled by default.  DRIVER_OPTION_REMOVE_PUPI_FROM_ATR: Remove PUPI from ATR if ISO
+	14443-B card is detected (ACR1222).  DRIVER_OPTION_DISABLE_PICC: Disable PICC if ICC is inserted
+	(ACR1222).
+
+2014-04-01  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.2 (28/1/2011).
+
+2014-04-01  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* m4/Makefile.am: Update EXTRA_DIST to ax_pthread.m4 in
+	m4/Makefile.am.
+
+2014-04-01  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* m4/ax_pthread.m4: Import ax_pthread.m4 from autoconf archive.
+
+2014-04-01  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* m4/acx_pthread.m4, m4/ax_pthread.m4: Rename m4/acx_pthread.m4 to
+	m4/ax_pthread.m4.
+
+2014-04-01  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Add the reader IDs to src/ccid.h for special handling.  ACR122U, ACR1281 Dual Reader (qPBOC) and ACR1281 Dual Reader (BSI).
+
+2014-04-01  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h, src/ccid_usb.c, src/ifdhandler.c: Read bmSlotIccState
+	from interrupt endpoint.  This improves the performance and stability for ACR122U v2.00 -
+	v2.04.
+
+2014-03-31  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c, src/ifdhandler.c: Simulate ACR1281 Dual Reader
+	(composite device) as multi-slot reader.
+
+2014-03-31  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Set the read timeout to infinite in CmdXfrBlock().  It applies to T=0, short APDU and extended APDU exchange.
+
+2014-03-31  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Fix the duplicate IFD_ERROR_INSUFFICIENT_BUFFER.
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Divide the command into number of packets in
+	WriteUSB().  Add 10 ms delay on each write for APG8201 and ACR85 ICC. It fixes a
+	bug that these readers cannot receive the command properly if the
+	command length is greater than 64 bytes.
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules, src/supported_readers.txt: Add supported
+	readers.  ACR100 ICC Reader, ACR101 ICC Reader, ACR102 ICC Reader, ACR1222L 3S
+	CL Reader, ACR1281 CL Reader (qPBOC) and ACR1281 Dual Reader (BSI).
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* bootstrap: Add bootstrap.
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.2 (17/12/2010).
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/configure: Use libusb 0.1 in MacOSX/configure.
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h: Add the reader IDs to src/ccid.h for special handling.  ACR83U, ACR85 PINPad Reader ICC, ACR85 PINPad Reader PICC, ACR1222
+	Dual Reader, ACR1222 1SAM Dual Reader and APG8201.
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Read the data from interrupt endpoint in
+	IFDHICCPresence().  It applies to ACR85 PICC and ACR1222.
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Request IFS if TPDU is supported in
+	IFDHSetProtocolParameters().
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Create the card detection thread on Mac OS X.
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Fix ACR1222 incorrect max slot index in
+	OpenUSBByName().
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Fix ACR128U incorrect CCID descriptor in
+	OpenUSBByName().
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Fix ACR88U incorrect CCID descriptor in
+	OpenUSBByName().
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_ifdhandler.h: Fix the missing FEATURE_IFD_PIN_PROPERTIES.
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_ifdhandler.h, src/ifdhandler.c: Handle ACR83U, ACR85 ICC
+	and APG8201 specific I/O controls.
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_ifdhandler.h, src/ifdhandler.c: Handle IOCTL_CCID_ESCAPE.
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Set the read timeout for
+	IOCTL_FEATURE_MCT_READERDIRECT.  The infinite timeout had been used before calling CmdEscape().
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Fix the missing or incorrect
+	PIN_PROPERTIES_STRUCTURE.
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Set the read timeout for
+	IOCTL_SMARTCARD_VENDOR_IFD_EXCHANGE.  The infinite timeout had been used before calling CmdEscape().
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Return 6B 80 if CCID error is FF in
+	CCID_Receive().  ACR83U, ACR85 and APG8201 will set this error if there is invalid
+	parameter in the PIN_VERIFY/PIN_MODIFY data structure.
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Remove the default read timeout in CmdEscape().
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Change the read timeout to infinite in
+	SecurePINModify().
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/commands.c: Change the read timeout to infinite in
+	SecurePINVerify().
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Add the default case in ccid_open_hack_post().
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Patch APG8201 and ACR85 ICC in ccid_open_hack_post().
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Patch ACR83U in ccid_open_hack_post().
+
+2014-03-30  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules, src/supported_readers.txt: Add supported
+	readers.  ACR83U, ACR85 PINPad Reader, ACR1222 Dual Reader, ACR1222 1SAM Dual
+	Reader, ACR1281 Dual Reader and APG8201.  Rename ACR1281 CL Reader to ACR1281 PICC Reader.
+
+2014-03-29  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.2 (22/11/2010).
+
+2014-03-29  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/configure: Import MacOSX/configure from ccid 1.3.12.
+
+2014-03-29  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules, src/supported_readers.txt: Add supported
+	readers.  ACR1281 CL Reader.
+
+2014-03-29  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.2 (17/6/2010).
+
+2014-03-29  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules, src/supported_readers.txt: Add supported
+	readers.  ACR125 nPA plus.
+
+2014-03-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Add 1 second delay in ccid_open_hack_pre().  Add sleep(1) after enabling the polling mode for ACR122U v2.06.
+
+2014-03-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.2 (2/2/2010).
+
+2014-03-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Enable the polling mode for ACR122U v2.06 in
+	ccid_open_hack_pre().
+
+2014-03-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Remove ACR122U from Bogus_firmwares.
+
+2014-03-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Update the version to 1.0.2 in configure.ac.
+
+2014-03-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Revert "Remove the firmware version checking in
+	OpenUSBByName()." This reverts commit ca500eafff748156b91130ea6d0d793f3cc6b31c.
+
+2014-03-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Revert "Disable the polling thread support in
+	IFDHGetCapabilities()." This reverts commit ece74575081f29f21725f7ff5c667c313c27bddc.
+
+2014-03-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h, src/ccid_usb.c, src/ifdhandler.c: Revert "Use the
+	separate thread to poll the slot ICC states." This reverts commit 692bb1fcc1f8311e3b0c0bbb6d9ee46f95496215.
+
+2014-03-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.1.
+
+2014-03-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h, src/ccid_usb.c, src/ifdhandler.c: Use the separate
+	thread to poll the slot ICC states.
+
+2014-03-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Disable the polling thread support in
+	IFDHGetCapabilities().
+
+2014-03-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_usb.c: Remove the firmware version checking in
+	OpenUSBByName().
+
+2014-03-28  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Update the version to 1.0.1 in configure.ac.
+
+2014-03-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* README: Update README for v1.0.0.
+
+2014-03-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.c: Disable the interrupt read in ccid_open_hack_pre().
+
+2014-03-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ifdhandler.c: Change the read timeout to 4 seconds in
+	IFDHPowerICC().
+
+2014-03-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid.h, src/ccid_usb.c: Patch ACR88U and ACR128U.
+
+2014-03-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Info.plist.src: Change the driver information to ACS in
+	src/Info.plist.src.
+
+2014-03-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules, src/supported_readers.txt: Add supported
+	readers.  ACR38U-CCID, ACR88U, ACR122U and ACR128U.
+
+2014-03-27  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/Makefile.am: Change CCID_LIB to libacsccid in src/Makefile.am.  Remove unnecessary entries.
+
+2014-03-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* MacOSX/configure: Remark --enable-composite-as-multislot in
+	MacOSX/configure.
+
+2014-03-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* m4/Makefile.am: Remove the comments in m4/Makefile.am.
+
+2014-03-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* m4/acx_pthread.m4: Update m4/acx_pthread.m4 with the latest
+	version.
+
+2014-03-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* AUTHORS: Add ACS to AUTHORS.
+
+2014-03-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* Makefile.am: Remove unnecessary entries in Makefile.am.
+
+2014-03-26  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac: Change AC_INIT to acsccid, 1.0.0 in configure.ac.  Remove unnecessary options.
+
+2014-03-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/reader.conf.in: Remove src/reader.conf.in.
+
+2014-03-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/parse.c: Remove src/parse.c.
+
+2014-03-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_serial.h: Remove src/ccid_serial.h.
+
+2014-03-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/ccid_serial.c: Remove src/ccid_serial.c.
+
+2014-03-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* src/pcscd_acsccid.rules, src/pcscd_ccid.rules: Rename
+	src/pcscd_ccid.rules to src/pcscd_acsccid.rules.
+
+2014-03-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* configure.ac, configure.in: Rename configure.in to configure.ac.
+
+2014-03-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* SCARDGETATTRIB.txt: Remove SCARDGETATTRIB.txt.
+
+2014-03-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* INSTALL: Remove INSTALL.
+
+2014-03-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* bootstrap: Remove bootstrap.
+
+2014-03-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* readers/ACR122U.txt, readers/ACR122U_PICC.txt,
+	readers/ACR38U-CCID.txt, readers/ASEDrive_IIIe_KB.txt,
+	readers/ASE_IIIe.txt, readers/ATMEL_AT91SO.txt,
+	readers/ActivCardV2.txt, readers/ActivCardV3.txt,
+	readers/Aladdin_eToken_PRO_USB_72K_Java.txt, readers/Alya.txt,
+	readers/AxaltoV3.txt, readers/BludriveII.txt,
+	readers/Broadcom_5880.txt, readers/C3PO_KBR36.txt,
+	readers/C3PO_LTC32_USBv2.txt, readers/C3PO_TLTC2USB.txt,
+	readers/CL1356T.txt, readers/CardMan1021.txt,
+	readers/CardMan3021.txt, readers/CardMan3121.txt,
+	readers/CardMan3621.txt, readers/CardMan3821.txt,
+	readers/CardMan4321.txt, readers/CardMan5125.txt,
+	readers/CardMan5321.txt, readers/CardMan6121.txt,
+	readers/Charismathics.txt, readers/CherryST1044U.txt,
+	readers/CherrySmartBoardXX1X.txt,
+	readers/CherrySmartTerminalST2XXX.txt, readers/CherryXX33.txt,
+	readers/CherryXX44.txt, readers/CryptoIdentity.txt,
+	readers/DellSCRK.txt, readers/DellSK-3106.txt,
+	readers/Eutron_CryptoIdentity.txt, readers/Eutron_Digipass_860.txt,
+	readers/Eutron_Smart_Pocket.txt,
+	readers/FujitsuSiemens_SmartCard_Keyboard_USB_2A.txt,
+	readers/FujitsuSiemens_SmartCard_USB_2A.txt,
+	readers/GemCoreSIMPro.txt, readers/GemPC433_SL.txt,
+	readers/GemPCKey.txt, readers/GemPCPinpad.txt,
+	readers/GemPCTwin.txt, readers/GemPC_Express.txt,
+	readers/Gem_e-SealPro.txt,
+	readers/GemaltoSmartEnterpriseGuardian.txt,
+	readers/Gemalto_PDT.txt, readers/GnD_StarSignCardToken350.txt,
+	readers/GnD_StarSignCardToken550.txt,
+	readers/HPUSBSmartCardKeyboard.txt,
+	readers/HP_MFP_SmartCardReader.txt, readers/KAAN_Advanced.txt,
+	readers/KAAN_Base.txt, readers/KAAN_SIM_III.txt,
+	readers/KEBTechnology_KONA_USB_SmartCard.txt,
+	readers/Kobil_EMV_CAP.txt, readers/LTC31.txt, readers/LTC31v2.txt,
+	readers/Lenovo.txt, readers/Makefile.am, readers/MySmartPad.txt,
+	readers/Oberthur-CosmoCard.txt, readers/Oz776S.txt,
+	readers/Oz776_7772.txt, readers/Philips_SmartMX.txt,
+	readers/Precise_250_MC.txt, readers/ReinerSCT.txt,
+	readers/SCR331-DI-NTTCom.txt, readers/SCR331-DI.txt,
+	readers/SCR331.txt, readers/SCR3310.txt, readers/SCR3311.txt,
+	readers/SCR3320.txt, readers/SCR333.txt, readers/SCR3340.txt,
+	readers/SCR335.txt, readers/SCR355.txt, readers/SDI010.txt,
+	readers/SIM_Pocket_Combo.txt, readers/SPR532.txt,
+	readers/Sitecom_MD-010.txt, readers/SpringCard_CSB6_Basic.txt,
+	readers/SpringCard_CSB6_Secure.txt,
+	readers/SpringCard_CSB6_Ultimate.txt,
+	readers/SpringCard_CrazyWriter.txt,
+	readers/SpringCard_EasyFinger_Standard.txt,
+	readers/SpringCard_EasyFinger_Ultimate.txt,
+	readers/SpringCard_Prox_N_Roll.txt, readers/Validy_TokenA.txt,
+	readers/Vasco_DP905.txt, readers/Vega-Alpha.txt,
+	readers/Verisign_secure_storage_token.txt,
+	readers/Verisign_secure_token.txt, readers/Winbond.txt,
+	readers/e-gate.txt, readers/iDream.txt,
+	readers/id3_CL1356A_HID.txt, readers/id3_CL1356D.txt,
+	readers/mIDentity.txt, readers/mIDentityXL.txt, readers/sid800.txt: 
+	Remove readers.
+
+2014-03-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* readers/supported_readers.txt, src/supported_readers.txt: Move
+	readers/supported_readers.txt to src.
+
+2014-03-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* examples/Makefile.am, examples/scardcontrol.c: Remove examples.
+
+2014-03-25  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* contrib/Kobil_mIDentity_switch/Kobil_mIDentity_switch.8,
+	contrib/Kobil_mIDentity_switch/Kobil_mIDentity_switch.c,
+	contrib/Kobil_mIDentity_switch/Makefile.am,
+	contrib/Kobil_mIDentity_switch/README_Kobil_mIDentity_switch.txt,
+	contrib/Makefile.am, contrib/RSA_SecurID/Makefile.am,
+	contrib/RSA_SecurID/RSA_SecurID_getpasswd.1,
+	contrib/RSA_SecurID/RSA_SecurID_getpasswd.c: Remove contrib.
+
+2014-03-24  Godfrey Chung <godfrey.chung@acs.com.hk>
+
+	* Import ccid 1.3.11.
+

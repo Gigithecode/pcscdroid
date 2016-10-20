@@ -1,0 +1,1 @@
+-c  `pkg-config --cflags libpcsclite` -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fwrapv -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -g   -DVERSION=\"0.05\" -DXS_VERSION=\"0.05\" -fPIC "-I/usr/lib/x86_64-linux-gnu/perl/5.22/CORE"  -O2 -Wall
